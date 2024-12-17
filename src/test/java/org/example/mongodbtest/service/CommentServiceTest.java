@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDate;
@@ -26,19 +27,24 @@ import static org.junit.jupiter.api.Assertions.*;
 class CommentServiceTest {
     @Autowired
     private CommentService commentService;
+    @Autowired
+    private MongoTemplate mongoTemplate;
+
     @Test
     void saveComment() {
         Comment comment = new Comment();
+        comment.setId("11");
         comment.setArticleId("article001");
-        comment.setContent("content");
+        comment.setContent("你好我今天很开心");
         comment.setUserId("1011");
         comment.setNickname("张文化");
         comment.setCreateDatetime(LocalDateTime.now());
         comment.setLikeNum(100);
         comment.setReplyNum(10000);
         comment.setState("active");
-        comment.setParentId(null);
-        commentService.saveComment(comment);
+        comment.setParentId("null");
+        mongoTemplate.insert(comment);
+//        commentService.saveComment(comment);
     }
 
     @Test

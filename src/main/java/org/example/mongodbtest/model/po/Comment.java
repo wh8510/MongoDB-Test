@@ -20,15 +20,12 @@ import java.util.Date;
 @Data
 @Document(collection = "comment")
 public class Comment implements Serializable {
-    @Id
     //主id
     public String id;
     //文章id
     public String articleId;
-    @Field("comment")
     //评论内容
     public String content;
-    @Indexed
     //评论人id
     public String userId;
     //评论人昵称

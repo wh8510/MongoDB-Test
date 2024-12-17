@@ -10,5 +10,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @Params: $
  * @Return $
  */
-public class CommentDTO {
+public class CommentDTO  {
 }
