@@ -5,11 +5,10 @@ import org.example.mongodbtest.model.po.Comment;
 import java.util.List;
 
 /**
- * @Author: 张文化
- * @Description: $
- * @DateTime: 2024/12/16$ 23:14$
- * @Params: $
- * @Return $
+ * mongodb ServiceImpl
+ *
+ * @author 张文化
+ * @date 2024/12/17
  */
 public interface CommentServiceImpl {
     void saveComment(Comment comment);

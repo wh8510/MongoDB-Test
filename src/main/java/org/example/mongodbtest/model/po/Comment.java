@@ -11,11 +11,10 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
- * @Author: 张文化
- * @Description: $
- * @DateTime: 2024/12/16$ 21:58$
- * @Params: $
- * @Return $
+ * comment po
+ *
+ * @author 张文化
+ * @date 2024/12/17
  */
 @Data
 @Document(collection = "comment")
